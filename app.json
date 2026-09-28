@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "devflow",
+    "name": "DevFlow",
     "slug": "devflow",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,16 +8,23 @@
     "scheme": "devflow",
     "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "com.devflow.app",
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.devflow.app",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0A0E1A",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "POST_NOTIFICATIONS"
+      ]
     },
     "web": {
       "output": "static",
@@ -28,9 +35,17 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#0A0E1A",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#00F0FF"
         }
       ]
     ],
